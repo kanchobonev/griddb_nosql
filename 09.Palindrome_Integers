@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _09.Palindrome_Integers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                string word = Console.ReadLine();
+
+                if (word == "END")
+                {
+                    break;
+                }
+
+                string reversedWord = string.Empty;
+
+                for (int i = word.Length; i >= 0; i--)
+                {
+                    reversedWord += word[i];
+                }
+
+                bool isPlalindrom = IsPlalindrom(word, reversedWord);
+
+                Console.WriteLine(isPlalindrom == true ? "true" : "false");
+
+            }
+
+        }
+
+        private static bool IsPlalindrom(string word, string reversedWord)
+        {
+            return word == reversedWord;
+        }
+    }
+    
+}
