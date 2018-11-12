@@ -1,0 +1,33 @@
+using System;using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+namespace _01.Reverse_Strings
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string words = Console.ReadLine();
+
+            while (words != "end")
+            {
+                words = Console.ReadLine();
+               
+            }
+
+            string reversed = "";
+
+            for (int i = words.Length; i >= 0; i--)
+            {
+                reversed += words[i];
+
+            }
+
+            Console.WriteLine(reversed);
+        }
+    }
+}
